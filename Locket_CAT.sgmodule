@@ -33,11 +33,13 @@ DOMAIN-SUFFIX,ingest.sentry.io,REJECT
 ^https?:\/\/api\.revenuecat\.com\/.+\/(receipts|subscribers) header-del If-None-Match
 ^https?:\/\/api\.revenuecat\.com\/.+\/(receipts|subscribers) header-del if-modified-since
 ^https?:\/\/api\.revenuecat\.com\/.+\/(receipts|subscribers) header-del If-Modified-Since
+
 ^https?:\/\/firebaseremoteconfig\.googleapis\.com\/.+ header-del if-none-match
 ^https?:\/\/firebaseremoteconfig\.googleapis\.com\/.+ header-del If-None-Match
 ^https?:\/\/firebaseremoteconfig\.googleapis\.com\/.+ header-del if-modified-since
 ^https?:\/\/firebaseremoteconfig\.googleapis\.com\/.+ header-del If-Modified-Since
 ^https?:\/\/firebaseremoteconfig\.googleapis\.com\/.+ header-del x-goog-if-none-match
+
 ^https?:\/\/api\.locketcamera\.com\/.+ header-del if-none-match
 ^https?:\/\/api\.locketcamera\.com\/.+ header-del If-None-Match
 ^https?:\/\/api\.locketcamera\.com\/.+ header-del if-modified-since
@@ -49,6 +51,7 @@ locket_fb = type=http-response,pattern=^https?:\/\/firebaseremoteconfig\.googlea
 locket_api = type=http-response,pattern=^https?:\/\/api\.locketcamera\.com\/.+,requires-body=true,max-size=-1,script-path=https://raw.githubusercontent.com/khoitran1328/mkhoilocket/main/Locket_CAT.js,timeout=60
 youtube_api = type=http-response,pattern=^https?:\/\/youtubei\.googleapis\.com\/(youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting|get_watch|log_event|config))(\?(.*))?$,requires-body=1,max-size=-1,binary-body-mode=1,script-path=https://raw.githubusercontent.com/khoitran1328/mkhoilocket/main/Locket_CAT.js
 spotify_api = type=http-response,pattern=^https?:\/\/(spclient\.wg\.spotify\.com|.*-spclient\.spotify\.com(?::443)?)\/(artistview\/v1\/artist|album-entity-view\/v2\/album|bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize),requires-body=1,binary-body-mode=1,max-size=0,script-path=https://raw.githubusercontent.com/khoitran1328/mkhoilocket/main/Locket_CAT.js
+
 [Host]
 firebaseremoteconfigrealtime.googleapis.com = 0.0.0.0
 
