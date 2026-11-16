@@ -33,13 +33,11 @@ DOMAIN-SUFFIX,ingest.sentry.io,REJECT
 ^https?:\/\/api\.revenuecat\.com\/.+\/(receipts|subscribers) header-del If-None-Match
 ^https?:\/\/api\.revenuecat\.com\/.+\/(receipts|subscribers) header-del if-modified-since
 ^https?:\/\/api\.revenuecat\.com\/.+\/(receipts|subscribers) header-del If-Modified-Since
-
 ^https?:\/\/firebaseremoteconfig\.googleapis\.com\/.+ header-del if-none-match
 ^https?:\/\/firebaseremoteconfig\.googleapis\.com\/.+ header-del If-None-Match
 ^https?:\/\/firebaseremoteconfig\.googleapis\.com\/.+ header-del if-modified-since
 ^https?:\/\/firebaseremoteconfig\.googleapis\.com\/.+ header-del If-Modified-Since
 ^https?:\/\/firebaseremoteconfig\.googleapis\.com\/.+ header-del x-goog-if-none-match
-
 ^https?:\/\/api\.locketcamera\.com\/.+ header-del if-none-match
 ^https?:\/\/api\.locketcamera\.com\/.+ header-del If-None-Match
 ^https?:\/\/api\.locketcamera\.com\/.+ header-del if-modified-since
